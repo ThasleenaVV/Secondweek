@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Webpage</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+  integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"   />
+
+<body class="bg-sky-300">
+  <nav class="bg-blue-900 p-4 text-white flex justify-between items-center relative">
+    <h1 class="text-xl font-bold w-full h-10">Travel journal</h1>
+    <ul class="flex gap-4 mr-10 ">
+      <li><a href="#" class="hover:underline">Home</a></li>
+      <li><a href="#" class="hover:underline">Places</a></li>
+      <li><a href="#" class="hover:underline">Contact</a></li>
+    </ul>
+  </nav>
+  <div class>
+    <span id="open" class=" text-white absolute top-5 text-1xl right-0 mr-4"><i class="fas fa-user"></i></span>
+  </div>
+
+  <h1 class="text-3xl font-bold text-center mt-10">My Travel journal</h1>
+  <section class="grid md:grid-cols-3 gap-6 p-10">
+
+    <div class="bg-white rounded-xl shadow p-4 hover:scale-105 transform transition duratio-300">
+      <img id="toggle" src="https://www.adotrip.com/public/images/city/5c3dc49c1d4e3-Wayanad%20Tours.jpg" alt="Wayanad">
+      <h2 class="text-xl font-semibold">Wayanad</h2>
+      <p class="text-grey-600">Wayanad, in Kerala, is a scenic hill district known for its forests, waterfalls, and
+        wildlife.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4 hover:scale-105 transform transition duratio-300">
+      <img id="alert" src="https://wallpaperaccess.com/full/2852003.jpg" alt="Ooty">
+      <h2 class="text-xl font-semibold">Ooty</h2>
+      <p class="text-grey-600">Ooty is a hill station in Tamil Nadu, known for its cool weather, tea gardens, and
+        beautiful landscapes.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4 hover:scale-105 transform transition duratio-300">
+      <img id="img3"
+        src="https://th.bing.com/th/id/R.5f201d704fdb8dc6ce77e2fa1f51531f?rik=g7hhZJN6YIxXSg&riu=http%3a%2f%2f1.bp.blogspot.com%2f-zLz7QCv68kM%2fUy2D7pnJloI%2fAAAAAAAACZA%2f1JoZ1DWASN0%2fs1600%2fMunnar_Hill_Station.JPG&ehk=8DgZ2ab7sM%2bN7d17CSVkMRELNEU5nZKF5HxxdkamEqs%3d&risl=&pid=ImgRaw&r=0"
+        alt="Munnar">
+      <h2 class="text-xl font-semibold">Munnar</h2>
+      <p class="text-grey-600">Munnar is a hill station in Kerala, famous for its tea gardens, cool climate, and scenic
+        beauty.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4 hover:scale-105 transform transition duratio-300">
+      <img src="https://i.pinimg.com/originals/0f/67/eb/0f67eb672b9e06d118b11017e535fe71.jpg" alt="Pune">
+      <h2 class="text-xl font-semibold">Pune</h2>
+      <p class="text-grey-600">Ooty is a hill station in Tamil Nadu, known for its cool weather, tea gardens, and
+        beautiful landscapes.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4 hover:scale-105 transform transition duratio-300">
+      <img src="https://cdn.getyourguide.com/img/location/58dd0cc5e6419.jpeg/88.jpg" alt="Banglore">
+      <h2 class="text-xl font-semibold">Banglore</h2>
+      <p class="text-grey-600">Ooty is a hill station in Tamil Nadu, known for its cool weather, tea gardens, and
+        beautiful landscapes.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4 hover:scale-105 transform transition duratio-300">
+      <img src="https://wallpaperaccess.com/full/1896134.jpg" alt="Delhi">
+      <h2 class="text-xl font-semibold">Delhi</h2>
+      <p class="text-grey-600">Ooty is a hill station in Tamil Nadu, known for its cool weather, tea gardens, and
+        beautiful landscapes.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4 hover:scale-105 transform transition duratio-300">
+      <img src="https://wallpapercave.com/wp/wp3995003.jpg" alt="Makkah">
+      <h2 class="text-xl font-semibold">Makkah</h2>
+      <p class="text-grey-600">Makkah, in Saudi Arabia, is the holiest city in Islam, the birthplace of Prophet Muhammad
+        (PBUH), and where millions of Muslims gather for Hajj and Umrah.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4 hover:scale-105 transform transition duratio-300">
+      <img src="https://www.meganstarr.com/wp-content/uploads/2023/02/Best-things-to-do-in-Stockholm_2090319031.jpg"
+        alt="Stockholm">
+      <h2 class="text-xl font-semibold">Stockholm</h2>
+      <p class="text-grey-600">Stockholm, the capital of Sweden, is known for its beautiful islands, historic buildings,
+        and modern culture.</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-4 hover:scale-105 transform transition duratio-300">
+      <img src="https://theworldpursuit.com/wp-content/uploads/2020/12/Helsinki-Waterfront.jpg" alt="Helsinki">
+      <h2 class="text-xl font-semibold">Helsinki</h2>
+      <p class="text-grey-600">Helsinki, the capital of Finland, is known for its seaside beauty, modern architecture,
+        and vibrant culture.</p>
+    </div>
+  </section>
+
+  <footer class="bg-white text-black text-center p-7 mt-10">
+    <p>&copy; 2025 My Travel journal. All rights reserved.</p>
+  </footer>
+
+
+  <div id="modal" class="fixed inset-0 bg-black-800/50 hidden flex justify-center items-center">
+    <div class="h-50 w-70 bg-blue-800 relative rounded-lg">
+     <p class="text-white px-4 py-2">
+               Hi, I’m Thasleena.  
+         I’m learning web development and this project is a part of my journey.  
+         I enjoy designing, coding, and discovering new things.
+     </p>
+      <button id="close" class="text-white border rounded-lg p-2 absolute bottom-5 right-5">close</button>
+  </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal')
+    const open = document.getElementById('open')
+    const close = document.getElementById('close')
+
+    open.addEventListener('click',()=>{
+      modal.classList.remove('hidden')
+    })
+    close.addEventListener('click',()=>{
+      modal.classList.add('hidden')
+    })
+
+    const toggle = document.getElementById('toggle')
+    // toggle.addEventListener('dblclick',()=>{
+    //   document.body.classList.toggle('bg-black-500')
+    //   document.body.classList.toggle('text-white')
+    // })
+    toggle.addEventListener('dblclick', () => {
+  document.body.classList.remove('bg-sky-300')
+  document.body.classList.toggle('bg-white')
+  document.body.classList.add('bg-sky-300')
+  document.body.classList.toggle('text-black')
+})
+const alertImg = document.getElementById('alert')
+    alertImg.addEventListener('click',()=>{
+      alert('Ooty is a beutiful place')
+    })
+
+    const myImg = document.getElementById('img3')
+      myImg.addEventListener('mouseenter',()=>{
+        myImg.src="https://www.indiatravel.app/wp-content/uploads/2024/02/places-to-visit-in-karnataka.jpg"
+      })
+      myImg.addEventListener('mouseleave',()=>{
+        myImg.src="https://th.bing.com/th/id/R.5f201d704fdb8dc6ce77e2fa1f51531f?rik=g7hhZJN6YIxXSg&riu=http%3a%2f%2f1.bp.blogspot.com%2f-zLz7QCv68kM%2fUy2D7pnJloI%2fAAAAAAAACZA%2f1JoZ1DWASN0%2fs1600%2fMunnar_Hill_Station.JPG&ehk=8DgZ2ab7sM%2bN7d17CSVkMRELNEU5nZKF5HxxdkamEqs%3d&risl=&pid=ImgRaw&r=0"
+      })
+   
+  </script>
+
+</body>
+
+</html>
+
+
+
