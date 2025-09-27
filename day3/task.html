@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-grey-100">
+ <form id="demoform" action="#" class="bg-white p-8 rounded-lg shadow-lg space-y-4">
+
+  <h2 class="text-2xl font-bold mb-4">Contact Form </h2>  
+
+  <div>
+    <label for="name" class="block mb-1 text-gray-700">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your Name"
+          class="w-full border rounded p-2">
+          <p id="namefeedback" class="mb-2 text-sm text-red-600"></p>
+  </div>
+
+  <div>
+    <label for="email" class="block mb-1 text-gray-700">Email</label>
+    <input type="email" id="email" name="email" placeholder="myname@example.com"
+          class="w-full border rounded p-2">
+          <p id="emailfeedback" class="mb-2 text-sm text-red-600"></p>
+  </div>
+
+    <label for="gender" class="block mb-1 text-gray-700">Gender</label>
+  <div class="border rounded w-full p-2">
+    <input type="radio" value="male" name="gender">Male 
+    <input type="radio" value="female" name="gender">Female
+</div> 
+
+  <div>
+    <label for="password" class="block mb-1 text-gray-700">Password</label>
+    <input type="password" id="password" name="password" placeholder="*******"
+           class="w-full border rounded p-2">
+           <p id="passwordfeedback" class="mb-2 text-sm text-red-600"></p>
+  </div>
+
+  <div>
+    <label for="mobile" class="block mb-1 text-gray-700">Mobile Number</label>
+    <input type="text" id="mobile" name="mobile" placeholder="10 digit number"
+          class="w-full border rounded p-2">
+          <p id="mobilefeedback" class="mb-2 text-sm text-red-600"></p>
+  </div>
+
+  <div>
+    <label for="message" class="block mb-1 text-gray-700">Message</label>
+    <textarea id="message" name="message" rows="4" placeholder="Your message..."
+           class="w-full border rounded p-2"></textarea> 
+  </div>
+
+    <button type="submit"
+           class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Send</button>
+           <p id="feedback" class="mt-2 text-sm"></p>
+</form>
+
+
+<script>
+    const demoform = document.getElementById('demoform')
+    const nameInput = document.getElementById('name')
+    const emailInput = document.getElementById('email')
+    const passwordInput = document.getElementById('password')
+    const mobileInput = document.getElementById('mobile')
+    const feedback = document.getElementById('feedback')
+  
+    const namefeedback = document.getElementById('namefeedback')
+    const emailfeedback = document.getElementById('emailfeedback')
+    const passwordfeedback = document.getElementById('passwordfeedback')
+    const mobilefeedback = document.getElementById('mobilefeedback')
+
+    demoform.addEventListener('submit',(e)=>{ 
+       e.preventDefault()
+
+      const namePattern=/^[A-Za-z]+\s+[A-Za-z]+$/
+      const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      const passwordPattern=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@&!%?#]).{8,}$/
+      const mobilePattern=/^\d{10}$/
+
+      let valid = true
+
+      if(!namePattern.test(nameInput.value.trim())) {
+        namefeedback.textContent = 'Enter full name (first and last)'
+        valid = false
+       } else {
+        namefeedback.textContent = ''
+       }
+
+        if(!emailPattern.test(emailInput.value.trim())) {
+          emailfeedback.textContent ='Enter valid email'
+          valid = false
+        }else {
+          emailfeedback.textContent =''
+        }
+       
+       if(!passwordPattern.test(passwordInput.value.trim())) {
+        passwordfeedback.textContent = 'Password must contain uppercase, lowercase, number, special char, min 8 chars'
+        valid = false
+       }else {
+        passwordfeedback.textContent =''
+       }
+
+       if(!mobilePattern.test(mobileInput.value.trim())){
+        mobilefeedback.textContent = 'Enter 10 digit number'
+        valid = false
+       }else {
+        mobilefeedback.textContent =''
+       }
+
+       if(valid) {
+        feedback.textContent = "Form submitted successfully ✅"
+        feedback.className = "text-green-600 mt-2 text-sm"
+       }else {
+        feedback.textContent = "Please fix errors ❌"
+        feedback.className = "text-red-600 mt-2 text-sm"
+       }
+      
+      })
+</script>
+</body>
+</html>
