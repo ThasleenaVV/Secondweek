@@ -6,7 +6,12 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="flex items-center justify-center min-h-screen bg-grey-100">
+<body class="flex items-center justify-center min-h-screen bg-gray-100 relative">
+
+  <button id="themeToggle" class="absolute top-4 right-4 bg-gray-800 text-white px-3 py-1 rounded">
+    Dark/Light 
+  </button>
+
  <form id="demoform" action="#" class="bg-white p-8 rounded-lg shadow-lg space-y-4">
 
   <h2 class="text-2xl font-bold mb-4">Contact Form </h2>  
@@ -51,6 +56,9 @@
            class="w-full border rounded p-2"></textarea> 
   </div>
 
+     <p class="mt-2 font-semibold">Live Preview:</p>
+     <div id="messagePreview" class="border p-2 rounded bg-gray-50 min-h-[50px]"></div>
+
     <button type="submit"
            class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Send</button>
            <p id="feedback" class="mt-2 text-sm"></p>
@@ -69,6 +77,12 @@
     const emailfeedback = document.getElementById('emailfeedback')
     const passwordfeedback = document.getElementById('passwordfeedback')
     const mobilefeedback = document.getElementById('mobilefeedback')
+
+    const messageInput = document.getElementById('message')
+    const messagePreview = document.getElementById('messagePreview')
+    messageInput.addEventListener('input',()=>{
+      messagePreview.textContent = messageInput.value
+    })
 
     demoform.addEventListener('submit',(e)=>{ 
        e.preventDefault()
@@ -109,13 +123,24 @@
        }
 
        if(valid) {
+        feedback.textContent = "sending..."
+        feedback.className = "text-blue-600 mt-2 text-sm"
+
+       setTimeout(()=>{
         feedback.textContent = "Form submitted successfully ✅"
         feedback.className = "text-green-600 mt-2 text-sm"
-       }else {
+       },2000)
+      }else {
         feedback.textContent = "Please fix errors ❌"
         feedback.className = "text-red-600 mt-2 text-sm"
-       }
-      
+      }
+
+      })
+
+      const themeToggle = document.getElementById('themeToggle')
+      themeToggle.addEventListener('click', ()=> {
+        document.body.classList.toggle('bg-gray-100')
+        document.body.classList.toggle('bg-gray-900')
       })
 </script>
 </body>
